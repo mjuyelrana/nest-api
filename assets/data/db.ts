@@ -1,8 +1,8 @@
-import { User } from "../../ts-types/user";
-import { Course } from "../../ts-types/course";
-import { Lesson } from "../../ts-types/lesson";
+import { UserType } from "../../ts-types/UserType";
+import { CourseType } from "../../ts-types/CourseType";
+import { LessonType } from "../../ts-types/LessonType";
 
-export const Users: Array<User> = [
+export const Users: Array<UserType> = [
   {
     id: 1,
     email: "student@angular-university.io",
@@ -17,10 +17,10 @@ export const Users: Array<User> = [
   }
 ];
 
-export const Courses: Array<Course> = [
+export const Courses: Array<CourseType> = [
   {
     id: 14,
-    description: "NestJs In Practice Course",
+    description: "NestJs In Practice CourseType",
     longDescription:
       "Build a modern REST backend using Typescript, MongoDB and the familiar Angular API.",
     iconUrl:
@@ -59,7 +59,7 @@ export const Courses: Array<Course> = [
   },
   {
     id: 3,
-    description: "RxJs In Practice Course",
+    description: "RxJs In Practice CourseType",
     longDescription:
       "Understand the RxJs Observable pattern, learn the RxJs Operators via practical examples",
     iconUrl:
@@ -72,7 +72,7 @@ export const Courses: Array<Course> = [
   },
   {
     id: 1,
-    description: "Serverless Angular with Firebase Course",
+    description: "Serverless Angular with Firebase CourseType",
     longDescription:
       "Serveless Angular with Firestore, Firebase Storage & Hosting, Firebase Cloud Functions & AngularFire",
     iconUrl:
@@ -97,7 +97,7 @@ export const Courses: Array<Course> = [
   },
   {
     id: 12,
-    description: "Angular Testing Course",
+    description: "Angular Testing CourseType",
     longDescription:
       "In-depth guide to Unit Testing and E2E Testing of Angular Applications",
     iconUrl:
@@ -110,7 +110,7 @@ export const Courses: Array<Course> = [
   },
   {
     id: 6,
-    description: "Angular Security Course - Web Security Fundamentals",
+    description: "Angular Security CourseType - Web Security Fundamentals",
     longDescription:
       "Learn Web Security Fundamentals and apply them to defend an Angular / Node Application from multiple types of attacks.",
     iconUrl:
@@ -123,7 +123,7 @@ export const Courses: Array<Course> = [
   },
   {
     id: 7,
-    description: "Angular PWA - Progressive Web Apps Course",
+    description: "Angular PWA - Progressive Web Apps CourseType",
     longDescription:
       "Learn Angular Progressive Web Applications, build the future of the Web Today.",
     iconUrl:
@@ -148,7 +148,7 @@ export const Courses: Array<Course> = [
   },
   {
     id: 9,
-    description: "The Complete Typescript Course",
+    description: "The Complete Typescript CourseType",
     longDescription:
       "Complete Guide to Typescript From Scratch: Learn the language in-depth and use it to build a Node REST API.",
     iconUrl:
@@ -161,7 +161,7 @@ export const Courses: Array<Course> = [
 
   {
     id: 10,
-    description: "Rxjs and Reactive Patterns Angular Architecture Course",
+    description: "Rxjs and Reactive Patterns Angular Architecture CourseType",
     longDescription:
       "Learn the core RxJs Observable Pattern as well and many other Design Patterns for building Reactive Angular Applications.",
     iconUrl:
@@ -173,7 +173,7 @@ export const Courses: Array<Course> = [
   },
   {
     id: 11,
-    description: "Angular Material Course",
+    description: "Angular Material CourseType",
     longDescription:
       "Build Applications with the official Angular Widget Library",
     iconUrl:
@@ -185,7 +185,7 @@ export const Courses: Array<Course> = [
   }
 ];
 
-export const Lessons: Array<Lesson> = [
+export const Lessons: Array<LessonType> = [
   {
     id: 1,
     description:
@@ -261,7 +261,7 @@ export const Lessons: Array<Lesson> = [
   },
   {
     id: 11,
-    description: "Course Helicopter View",
+    description: "CourseType Helicopter View",
     duration: "08:19",
     seqNo: 1,
     courseId: 6
@@ -319,7 +319,7 @@ export const Lessons: Array<Lesson> = [
   },
   {
     id: 19,
-    description: "User Sign Up Server-Side Implementation in Express",
+    description: "UserType Sign Up Server-Side Implementation in Express",
     duration: "08:50",
     seqNo: 9,
     courseId: 6
@@ -342,7 +342,7 @@ export const Lessons: Array<Lesson> = [
   {
     id: 22,
     description:
-      "Course Kick-Off - Install Node, NPM, IDE And Service Workers Section Code",
+      "CourseType Kick-Off - Install Node, NPM, IDE And Service Workers Section Code",
     duration: "07:19",
     seqNo: 1,
     courseId: 7
@@ -473,7 +473,7 @@ export const Lessons: Array<Lesson> = [
   },
   {
     id: 40,
-    description: "Angular Testing Course - Helicopter View",
+    description: "Angular Testing CourseType - Helicopter View",
     duration: "5:38",
     seqNo: 1,
     courseId: 12
@@ -543,14 +543,14 @@ export const Lessons: Array<Lesson> = [
   },
   {
     id: 50,
-    description: "Welcome to the Angular Ngrx Course",
+    description: "Welcome to the Angular Ngrx CourseType",
     duration: "6:53",
     seqNo: 1,
     courseId: 4
   },
   {
     id: 51,
-    description: "The Angular Ngrx Architecture Course - Helicopter View",
+    description: "The Angular Ngrx Architecture CourseType - Helicopter View",
     duration: "5:52",
     seqNo: 2,
     courseId: 4
@@ -685,16 +685,16 @@ export const Lessons: Array<Lesson> = [
   }
 ];
 
-export const findAllUsers = (): Array<User> => Users;
-export const findAllCourses = (): Array<Course> => Courses;
-export const findAllLessons = (): Array<Lesson> => Lessons;
-export const findCourseById = (courseId: number): Course =>
-  findAllCourses().find((course: Course) => course.id === courseId) as Course;
-export const findLessonsForCourse = (courseId: number): Lesson =>
-  findAllLessons().find(
-    (lesson: Lesson) => lesson.courseId === courseId
-  ) as Lesson;
-export const authenticate = (email: string, password: string): User =>
+export const findAllUsers = (): Array<UserType> => Users;
+export const findAllCourses = (): Array<CourseType> => Courses;
+export const findAllLessons = (): Array<LessonType> => Lessons;
+export const findCourseById = (courseId: number): CourseType =>
+  findAllCourses().find((course: CourseType) => course.id === courseId) as CourseType;
+export const findLessonsForCourse = (courseId: number): Array<LessonType> =>
+  findAllLessons().filter(
+    (lesson: LessonType) => lesson.courseId === courseId
+  ) as Array<LessonType>;
+export const authenticate = (email: string, password: string): UserType =>
   findAllUsers().find(
-    (user: User) => user.email === email && user.password === password
-  ) as User;
+    (user: UserType) => user.email === email && user.password === password
+  ) as UserType;
