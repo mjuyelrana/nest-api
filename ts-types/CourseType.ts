@@ -1,4 +1,4 @@
-export interface Course {
+export interface CourseType {
   _id?: string;
   id?: number;
   seqNo: number;
@@ -12,7 +12,7 @@ export interface Course {
   promo?: boolean;
 }
 
-export const compareCourses = (c1: Course, c2: Course) => {
+export const compareCourses = (c1: CourseType, c2: CourseType) => {
   const compare = c1.seqNo - c2.seqNo;
   if (compare > 0) return 0;
   else if (compare < 0) return -1;
